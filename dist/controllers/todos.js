@@ -9,3 +9,6 @@ exports.createTodo = (req, res, next) => {
     TODOS.push(newTodo);
     res.status(201).json({ message: "Created the todo.", createdTodo: newTodo });
 };
+exports.getTodos = (req, res, next) => {
+    res.json({ todos: TODOS });
+};
